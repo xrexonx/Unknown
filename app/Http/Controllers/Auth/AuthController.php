@@ -62,5 +62,6 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+        die(var_dump('rexon'));
     }
 }

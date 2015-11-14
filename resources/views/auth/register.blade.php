@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container">
-    <form method="POST" action="/auth/register>
-        {!! csrf_field() !!}
+    <form method="POST" action="/auth/register">
+        {{ csrf_field() }}
         <div class="row">
             <div class="input-field col s12">
                 <input id="name" type="text" class="validate" name="name" value="{{ old('name') }}">
