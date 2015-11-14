@@ -25,11 +25,11 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 
 Route::get('dashboard', function () {
-    return view('dashboard')->with('users', Auth::user());
+    return view('dashboard')->with('name', Auth::user()->name);
 });
 
 Route::get('home', function () {
-    return view('dashboard')->with('users', Auth::user());
+    return view('dashboard')->with('name', Auth::user()->name);
 });
 
 
