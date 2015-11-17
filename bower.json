@@ -1,8 +1,8 @@
 {
   "name": "unknown-project",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "authors": [
-    "Rexon A. De los Reyes <rexon.delosreyes@corp.mobile.co>"
+    "Rexon A. De los Reyes <rexondelosreyes88@gmail.com>"
   ],
   "description": "When boredom strikes!",
   "moduleType": [
@@ -27,6 +27,7 @@
   "dependencies": {
     "materialize": "~0.97.2",
     "angular": "~1.4.7",
-    "angular-ui-router": "~0.2.15"
+    "angular-ui-router": "~0.2.15",
+    "angular-string-helper": "~1.0.0"
   }
 }

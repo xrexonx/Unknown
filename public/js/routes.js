@@ -6,29 +6,14 @@
         .config(function($stateProvider, $urlRouterProvider) {
 
             function _getView (viewName) {
-                return 'views/'+viewName+'.blade.php';
+                return 'views/'+viewName+'.html';
             }
 
             $stateProvider
                 .state('/', {
                     url: '/',
-                    templateUrl: _getView('default'),
-                    controller: 'UsersController'
-                })
-                .state('signIn', {
-                    url: '/signUp',
-                    templateUrl: _getView('signUp'),
-                    controller: 'AuthController as auth'
-                })
-                .state('login', {
-                    url: '/login',
-                    templateUrl: _getView('login'),
-                    controller: 'AuthController as auth'
-                })
-                .state('dashboard', {
-                    url: '/dashboard',
                     templateUrl: _getView('dashboard'),
-                    controller: 'DashController as auth'
+                    controller: 'DashController'
                 });
 
             $urlRouterProvider.otherwise('/');

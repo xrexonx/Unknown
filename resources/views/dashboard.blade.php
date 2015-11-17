@@ -3,7 +3,7 @@
 @section('content')
     <nav>
         <div class="nav-wrapper teal darken-2">
-            <a href="#" class="left brand-logo">Dashboard Confessional</a>
+            <a href="#" class="left brand-logo">Dashboard</a>
             <ul id="nav-mobile" class="right">
                 <li>
                     <a class='dropdown-button' href='#' data-activates='dropdown1'>{{ $name }}</a>
@@ -19,36 +19,38 @@
         </div>
     </nav>
 
-<div class="row">
+    <div ui-view></div>
 
-    <div class="col s12 m4 l3 blue-grey lighten-2">
-        <br>
-        <div class="row center-align fadeMeIn">
-            <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Add Unknown</a>
-        </div>
+    {{--<div ng-controller="DashController" class="row">--}}
 
-        <ul class="collection unknownList with-header">
-            <li class="collection-item"><h4>Unknown List</h4></li>
-            <li class="collection-item"><a href="#!" >Unknown</a></li>
-            <li class="collection-item"><a href="#!" >Unknown</a></li>
-            <li class="collection-item"><a href="#!" >Unknown</a></li>
-            <li class="collection-item"><a href="#!" >Unknown</a></li>
-            <li class="collection-item"><a href="#!" >Unknown</a></li>
-            <li class="collection-item"><a href="#!" >Unknown</a></li>
-            <li class="collection-item"><a href="#!" >Unknown</a></li>
-            <li class="collection-item"><a href="#!" >Unknown</a></li>
-            <li class="collection-item"><a href="#!" >Unknown</a></li>
-            <li class="collection-item"><a href="#!" >Unknown</a></li>
-            <li class="collection-item"><a href="#!" >Unknown</a></li>
-            <li class="collection-item"><a href="#!" >Unknown</a></li>
-            <li class="collection-item"><a href="#!" >Unknown</a></li>
-        </ul>
-    </div>
+        {{--<div class="col s12 m4 l3 blue-grey lighten-2">--}}
+            {{--<br>--}}
+            {{--<div class="row center-align fadeMeIn">--}}
+                {{--<a class="modal-trigger waves-effect waves-light btn" href="#modal1">Create Unknown</a>--}}
+            {{--</div>--}}
 
-    <div class="col s12 m8 l9 grey lighten-3">
- asfasdfssdfasdf
-    </div>
+            {{--<ul class="collection unknownList with-header">--}}
+                {{--<li class="collection-item"><h4>Unknown List</h4></li>--}}
+                {{--<li class="collection-item"><a href="#!" >Unknown</a></li>--}}
+                {{--<li class="collection-item"><a href="#!" >Unknown</a></li>--}}
+                {{--<li class="collection-item"><a href="#!" >Unknown</a></li>--}}
+                {{--<li class="collection-item"><a href="#!" >Unknown</a></li>--}}
+                {{--<li class="collection-item"><a href="#!" >Unknown</a></li>--}}
+                {{--<li class="collection-item"><a href="#!" >Unknown</a></li>--}}
+                {{--<li class="collection-item"><a href="#!" >Unknown</a></li>--}}
+                {{--<li class="collection-item"><a href="#!" >Unknown</a></li>--}}
+                {{--<li class="collection-item"><a href="#!" >Unknown</a></li>--}}
+                {{--<li class="collection-item"><a href="#!" >Unknown</a></li>--}}
+                {{--<li class="collection-item"><a href="#!" >Unknown</a></li>--}}
+                {{--<li class="collection-item"><a href="#!" >Unknown</a></li>--}}
+                {{--<li class="collection-item"><a href="#!" >Unknown</a></li>--}}
+            {{--</ul>--}}
+        {{--</div>--}}
 
-</div>
-@include('common.addUnknown')
+        {{--<div class="col s12 m8 l9 grey lighten-3">--}}
+                {{--asfasdfssdfasdf--}}
+        {{--</div>--}}
+
+        {{--@include('common.addUnknown')--}}
+    {{--</div>--}}
 @endsection
