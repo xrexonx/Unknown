@@ -6,9 +6,10 @@
                 <p>{{list.description}}</p>
             </div>
             <div class="card-action right-align">
-                <a href="#">View User</a>
-                <a href="#">View Issue</a>
+                <a ui-sref="project({ id: {{list.id}}, view: 'users' })">View User</a>
+                <a ui-sref="project({ id: {{list.id}}, view: 'issues' })">View Issue</a>
             </div>
         </div>
     </div>
 </div>
+<div ui-view="contents"></div>

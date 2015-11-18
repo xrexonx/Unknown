@@ -1,11 +1,17 @@
 <nav>
-    <div class="nav-wrapper teal lighten-1">
-        <a href="#" class="left brand-logo">Atik lang!</a>
+    <div class="nav-wrapper teal darken-2">
+        <a href="#" class="left brand-logo">Dashboard</a>
         <ul id="nav-mobile" class="right">
-            <li><a href="auth/login">Login</a></li>
-            <li><a href="auth/register">Sign Up</a></li>
-            {{--<li><a  ui-sref="login" >Login</a></li>--}}
-            {{--<li><a  ui-sref="signUp" >Sign Up</a></li>--}}
+            <li>
+                <a class='dropdown-button' href='#' data-activates='dropdown1'>{{ $name }}</a>
+                <ul id='dropdown1' class='dropdown-content'>
+                    <li><a href="#!">{{ $name }}</a></li>
+                    <li><a href="#!">Profile</a></li>
+                    <li><a href="#!">Settings</a></li>
+                    <li class="divider"></li>
+                    <li><a href="auth/logout">Logout</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </nav>

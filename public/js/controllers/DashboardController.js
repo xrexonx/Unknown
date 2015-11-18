@@ -3,12 +3,13 @@
 
     angular
         .module('UnknownControllers')
-        .controller('DashController', function ($scope, Project) {
+        .controller('DashController', function ($scope, $stateParams, Project) {
 
             var vm = $scope;
 
             vm.project = {};
             vm.projectList = {};
+            vm.view = $stateParams.view;
 
             vm.actions = {
                 show: function () {
@@ -16,7 +17,7 @@
                     Project
                         .get()
                         .success(function (response) {
-                            console.log(response);
+                            //console.log(response);
                             if (response) {
                                 vm.projectList = response;
                                 //vm.projectList.push(response);
