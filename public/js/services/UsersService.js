@@ -3,17 +3,14 @@
 
     angular
         .module('UnknownServices')
-        .service('Project', function (Ajax) {
+        .service('Users', function (Ajax) {
 
             return {
                 get:  function () {
-                    return Ajax.send('project/show', 'GET', '', '');
+                    return Ajax.send('users/getUsers', 'GET', '', '');
                 },
                 create: function ($oProjects) {
                     return Ajax.send('project/create', 'POST', $oProjects, '');
-                },
-                getAllUsers: function () {
-                    return Ajax.send('project/getUsers', 'GET', '', '');
                 }
             };
 

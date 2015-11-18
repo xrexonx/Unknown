@@ -19,9 +19,7 @@
                     url: '/:id/:view',
                     templateUrl: _getView('project'),
                     controllerProvider: function($stateParams) {
-                        var ctrlName = $stateParams.view;
-                        var name = ctrlName.charAt(0).toUpperCase() + ctrlName.slice(1);
-                        return name + 'Controller';
+                        return $stateParams.view + 'Controller';
                     }
                 });
 

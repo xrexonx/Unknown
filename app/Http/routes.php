@@ -26,5 +26,6 @@ Route::group(['prefix' => 'api'], function () {
 
     Route::get('project/show', 'ProjectController@show');
     Route::post('project/create', 'ProjectController@createProject');
+    Route::get('project/getUsers', 'UsersController@getUsers');
 
 });

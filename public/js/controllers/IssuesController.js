@@ -3,7 +3,7 @@
 
     angular
         .module('UnknownControllers')
-        .controller('IssuesController', function ($scope, $stateParams, Project) {
+        .controller('IssuesController', function ($scope, $stateParams, Project, Utils) {
 
 
             var vm = $scope;
@@ -21,7 +21,7 @@
                         });
                 },
                 openModal: function () {
-                    $('#addIssueModal').openModal();
+                    Utils.openModal('addIssueModal');
                 },
                 //create: function () {
                 //    Project.create(vm.project).then(function (response) {

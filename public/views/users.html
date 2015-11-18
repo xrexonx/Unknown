@@ -1,1 +1,16 @@
-xzczxcxzcasdasdsazxczxcasdasd
+<br>
+<div class="row right-align fadeMeIn">
+    <a class="modal-trigger waves-effect waves-light btn" ng-click="actions.openModal()">Create Unknown</a>
+    <a class="modal-trigger waves-effect waves-light btn" ng-click="actions.openModal()">Create Unknown</a>
+</div>
+<div ng-include="'views/modals/addProjectUser.html'" ></div>
+<ul class="collection" ng-init="actions.getUsers()">
+    <li class="collection-item avatar" ng-repeat="user in projectUsers">
+        <img src="images/avatar.png" alt="" class="circle">
+        <span class="title">{{user.name}}</span>
+        <p>{{user.email}} <br>
+            Web Developer
+        </p>
+        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+</ul>
