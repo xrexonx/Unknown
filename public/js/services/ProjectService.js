@@ -12,8 +12,8 @@
                 create: function ($oProjects) {
                     return Ajax.send('project/create', 'POST', $oProjects, '');
                 },
-                getAllUsers: function () {
-                    return Ajax.send('project/getUsers', 'GET', '', '');
+                getUsers: function ($oProjects) {
+                    return Ajax.send('project/getUsers', 'GET', $oProjects, '');
                 }
             };
 

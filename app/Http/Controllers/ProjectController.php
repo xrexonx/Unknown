@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use Validator;
-use App\Project;
+use App\Models\Project;
+use App\Models\ProjectUser;
+use App\User;
 
 class ProjectController extends Controller
 {
@@ -29,4 +31,14 @@ class ProjectController extends Controller
         }
 
     }
+
+    protected function getUsers ()
+    {
+//      $project = ProjectUser::where('projectId', Auth::user()->id)->get();
+        //since no project user inserted yet in database. display all users
+        $users = User::all();
+        return response()->json($users);
+    }
+
+
 }

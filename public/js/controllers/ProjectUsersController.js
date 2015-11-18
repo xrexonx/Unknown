@@ -30,7 +30,7 @@
                 },
                 getUsers: function () {
                     Project
-                        .getAllUsers()
+                        .getUsers({id:$stateParams.id})
                         .success(function (response) {
                             if (response) {
                                 vm.projectUsers = response;
