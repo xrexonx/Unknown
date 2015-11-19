@@ -3,7 +3,7 @@
         <a href="#" class="left brand-logo">Dashboard</a>
         <ul id="nav-mobile" class="right">
             <li>
-                <a class='dropdown-button' href='#' data-activates='dropdown1'>{{ $name }}</a>
+                <a class='dropdown-button' href='#' data-activates='dropdown1'>{{ $name }} <span class="teal-text darken-4-text">&#x25BC</span></a>
                 <ul id='dropdown1' class='dropdown-content'>
                     <li><a href="#!">{{ $name }}</a></li>
                     <li><a href="#!">Profile</a></li>

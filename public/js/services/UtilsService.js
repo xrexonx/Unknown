@@ -6,6 +6,7 @@
         .service('Utils', function () {
 
             function _openModal (modalName) {
+                $('select').material_select();
                 return $('#'+modalName).openModal(); //jquery pa more!
             }
 

@@ -18,7 +18,6 @@ class ProjectController extends Controller
 
     protected function createProject(Request $request)
     {
-
         $project = new Project();
         $project->projectName = $request->name;
         $project->description = $request->desc;

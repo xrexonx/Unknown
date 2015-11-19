@@ -3,7 +3,7 @@
 
     angular
         .module('UnknownControllers')
-        .controller('DashController', function ($scope, $stateParams, Project) {
+        .controller('DashController', function ($scope, $stateParams, Project, Utils) {
 
             var vm = $scope;
 
@@ -25,12 +25,12 @@
                         });
                 },
                 openModal: function () {
-                    $('#modal1').openModal();
+                    Utils.openModal('addProject');
                 },
                 create: function () {
                     Project.create(vm.project).then(function (response) {
                         console.log(response);
-                        Materialize.toast('Yeah', 4000)
+                        Materialize.toast('Successfully Created', 4000, 'blue-grey lighten-1')
                     });
 
                 }

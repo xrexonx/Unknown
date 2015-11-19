@@ -7,6 +7,7 @@
 
             var vm = $scope;
             vm.view = $stateParams.view;
+            vm.projectUsers = {};
 
             vm.actions = {
                 show: function () {
@@ -23,9 +24,10 @@
                     Utils.openModal('addProjectUser');
                 },
                 addUser: function () {
-                    Project.addUser(vm.project).then(function (response) {
+                    console.log(vm.projectUsers.users); return false;
+                    Project.addUser(vm.project.users).then(function (response) {
                         console.log(response);
-                        Materialize.toast('Yeah', 4000)
+                        Materialize.toast('Successfully failed.', 5000, 'teal lighten-2')
                     });
                 },
                 getUsers: function () {

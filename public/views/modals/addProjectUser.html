@@ -3,20 +3,20 @@
         <h4>Add Unknown</h4>
         <div class="row">
             <form class="col s12">
-
-
-                <label>Browser Select</label>
-                <select class="browser-default">
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                </select>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select multiple  ng-init="actions.getUsers()" ng-model="projectUsers.users">
+                            <option value="" disabled selected>Select Users</option>
+                            <option value="{{user.id}}" ng-repeat="user in projectUsers">{{user.name}}</option>
+                        </select>
+                        <label>Add Users</label>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
     <div class="modal-footer">
-        <a ng-click="actions.create()" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+        <a ng-click="actions.addUser()" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancel</a>
     </div>
 </div>
