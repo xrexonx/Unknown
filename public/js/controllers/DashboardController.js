@@ -17,10 +17,8 @@
                     Project
                         .get()
                         .success(function (response) {
-                            //console.log(response);
                             if (response) {
                                 vm.projectList = response;
-                                //vm.projectList.push(response);
                             }
                         });
                 },
@@ -28,9 +26,14 @@
                     Utils.openModal('addProject');
                 },
                 create: function () {
-                    Project.create(vm.project).then(function (response) {
-                        console.log(response);
-                        Materialize.toast('Successfully Created', 4000, 'blue-grey lighten-1')
+                    Project
+                        .create(vm.project)
+                        .then(function (response) {
+                        if (response.statusText === 'OK' && response.data) {
+                            vm.projectList = response.data.oProject;
+                            Materialize.toast(response.data.message, 4000, 'blue-grey lighten-1')
+                        }
+
                     });
 
                 }

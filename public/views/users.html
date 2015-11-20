@@ -4,7 +4,7 @@
 </div>
 <div ng-include="'views/modals/addProjectUser.html'" ></div>
 <div class="row projectUserList" style="height:45em;overflow: scroll">
-    <ul class="collection" ng-init="actions.getUsers()">
+    <ul class="collection" ng-init="actions.getProjectUsers()">
         <li class="collection-item avatar" ng-repeat="user in projectUsers">
             <img src="images/avatar.png" alt="" class="circle">
             <span class="title">{{user.name}}</span>
@@ -14,5 +14,5 @@
             <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
         </li>
     </ul>
-    <div ng-if="user == ''" class="card-panel center-align blue-grey lighten-1">No unknown users in this project yet..</div>
+    <div ng-if="projectUsers == ''" class="card-panel center-align blue-grey lighten-1">No unknown users in this project yet..</div>
 </div>

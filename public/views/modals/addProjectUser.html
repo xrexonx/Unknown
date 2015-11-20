@@ -5,9 +5,9 @@
             <form class="col s12">
                 <div class="row">
                     <div class="input-field col s12">
-                        <select multiple  ng-init="actions.getUsers()" ng-model="projectUsers.users">
+                        <select multiple ng-init="actions.getUsers()" ng-model="projectUsers.users">
                             <option value="" disabled selected>Select Users</option>
-                            <option value="{{user.id}}" ng-repeat="user in projectUsers">{{user.name}}</option>
+                            <option value="{{user.id}}" ng-repeat="user in users">{{user.name}}</option>
                         </select>
                         <label>Add Users</label>
                     </div>

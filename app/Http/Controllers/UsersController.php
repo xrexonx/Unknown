@@ -10,9 +10,8 @@ use App\User;
 
 class UsersController extends Controller
 {
-    protected function getUsers(Request $request)
+    protected function getUsers()
     {
-//        var_dump($request->all()); exit;
         $users = User::all();
         return response()->json($users);
     }

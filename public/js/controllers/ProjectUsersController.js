@@ -7,6 +7,7 @@
 
             var vm = $scope;
             vm.view = $stateParams.view;
+            vm.pId = $stateParams.id;
             vm.projectUsers = {};
 
             vm.actions = {
@@ -24,16 +25,35 @@
                     Utils.openModal('addProjectUser');
                 },
                 addUser: function () {
-                    console.log(vm.projectUsers.users); return false;
-                    Project.addUser(vm.project.users).then(function (response) {
-                        console.log(response);
-                        Materialize.toast('Successfully failed.', 5000, 'teal lighten-2')
-                    });
+
+                    var oProject = {
+                        iProjectId:vm.pId,
+                        aUsersId:JSON.stringify(vm.projectUsers.users)
+                    }
+                    Project
+                        .addUser(oProject)
+                        .then(function (response) {
+                            if (response.statusText === "OK" && response.data) {
+                                vm.projectUsers = response.data.oProjectUser;
+                                Materialize.toast(response.data.message, 5000, 'teal lighten-2')
+                            }
+                        });
                 },
                 getUsers: function () {
                     Project
-                        .getUsers({id:$stateParams.id})
+                        .getUsers()
                         .success(function (response) {
+                            if (response) {
+                                vm.users = response;
+                            }
+                        });
+                },
+                getProjectUsers: function () {
+                    console.log('get project users');
+                    Project
+                        .getProjectUsers({id:vm.pId})
+                        .success(function (response) {
+                            console.log(response);
                             if (response) {
                                 vm.projectUsers = response;
                             }

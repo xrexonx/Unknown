@@ -5,7 +5,7 @@
 <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/routes.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/services/AjaxService.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/services/AuthService.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/services/UsersService.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/services/ProjectService.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/services/UtilsService.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/controllers/DashboardController.js') }}"></script>

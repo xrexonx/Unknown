@@ -1,7 +1,6 @@
 @extends('master')
 
 @section('content')
-    {{--<div ui-view></div>--}}
     <div class="row"></div>
     <div class="row"></div>
     <div class="row"></div>

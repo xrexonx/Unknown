@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Auth;
 
 class Project extends Model {
 
@@ -12,4 +12,8 @@ class Project extends Model {
     protected $fillable = ['projectName', 'description', 'userId', 'status'];
 
 
+    protected function getProject ()
+    {
+        return Project::where('userId', Auth::user()->id)->get();
+    }
 }
