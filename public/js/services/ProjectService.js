@@ -3,7 +3,7 @@
 
     angular
         .module('UnknownServices')
-        .service('Project', function (Ajax) {
+        .service('Project', function ($q, Ajax) {
 
             return {
                 get:  function () {
@@ -20,6 +20,17 @@
                 },
                 addUser: function (oProjects) {
                     return Ajax.send('project/addUser', 'POST', oProjects, '');
+                },
+                resolveProject : function () {
+                    var deferred = $q.defer();
+                        this
+                            .get()
+                            .success(function (response) {
+                                if (response) {
+                                    deferred.resolve(response);
+                                }
+                            });
+                        return deferred.promise;
                 }
             };
 

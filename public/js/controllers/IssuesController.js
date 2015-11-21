@@ -3,23 +3,13 @@
 
     angular
         .module('UnknownControllers')
-        .controller('IssuesController', function ($scope, $stateParams, Project, Utils) {
-
+        .controller('IssuesController', function ($scope, $stateParams, Project, Utils, oProject) {
 
             var vm = $scope;
             vm.view = $stateParams.view;
+            vm.projectList = oProject;
 
             vm.actions = {
-                show: function () {
-
-                    Project
-                        .get()
-                        .success(function (response) {
-                            if (response) {
-                                vm.projectList = response;
-                            }
-                        });
-                },
                 openModal: function () {
                     Utils.openModal('addIssueModal');
                 },

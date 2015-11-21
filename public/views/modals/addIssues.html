@@ -6,7 +6,7 @@
 
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="name" type="text" class="validate" ng-model="project.name">
+                        <input id="name" type="text" class="validate" ng-model="issue.name">
                         <label for="name">Issue Name</label>
                     </div>
                 </div>
@@ -14,7 +14,7 @@
                 <div class="row">
                     <div class="input-field col s6">
                         <div class="input-field col s12">
-                            <select>
+                            <select ng-model="issue.type">
                                 <option value="1">Tasks</option>
                                 <option value="2">Bugs</option>
                                 <option value="3">New Feature</option>
@@ -24,7 +24,7 @@
                     </div>
                     <div class="input-field col s6">
                         <div class="input-field col s12">
-                            <select>
+                            <select ng-model="issue.priority">
                                 <option value="1">Normal</option>
                                 <option value="2">Medium</option>
                                 <option value="3">High</option>
@@ -34,17 +34,23 @@
                     </div>
                 </div>
 
-
                 <div class="row">
-                    <div class="input-field col s12">
-                        <input id="name" type="text" class="validate" ng-model="project.name">
-                        <label for="name">Unknown Name</label>
+                    <div class="input-field col s6">
+                        <div class="input-field col s12">
+                            <select>
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label>Assign to</label>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="desc" type="text" class="validate" ng-model="project.desc">
-                        <label for="desc">Unknown Description</label>
+                    <div class="input-field col s6">
+                        <div class="input-field col s12">
+                            <label for="date">Due Date</label>
+                            <input id="date" type="date" class="validate" ng-model="issue.dueDate">
+                        </div>
                     </div>
                 </div>
             </form>

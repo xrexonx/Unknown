@@ -3,24 +3,16 @@
 
     angular
         .module('UnknownControllers')
-        .controller('DashController', function ($scope, $stateParams, Project, Utils) {
+        .controller('DashController', function ($scope, $stateParams, Project, Utils, oProject) {
 
             var vm = $scope;
 
             vm.project = {};
-            vm.projectList = {};
             vm.view = $stateParams.view;
 
             vm.actions = {
                 show: function () {
-
-                    Project
-                        .get()
-                        .success(function (response) {
-                            if (response) {
-                                vm.projectList = response;
-                            }
-                        });
+                    vm.projectList = oProject;
                 },
                 openModal: function () {
                     Utils.openModal('addProject');

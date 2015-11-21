@@ -9,18 +9,27 @@
                 return 'views/'+viewName+'.html';
             }
 
+            var oResolved = {
+                oProject : function (Project) {
+                    return Project.resolveProject();
+                }
+            }
+
             $stateProvider
                 .state('/', {
+                    resolve: oResolved,
                     url: '/',
                     templateUrl: _getView('dashboard'),
                     controller: 'DashController'
                 })
                 .state('project', {
+                    resolve: oResolved,
                     url: '/:id/:view',
                     templateUrl: _getView('project'),
                     controllerProvider: function($stateParams) {
                         return $stateParams.view + 'Controller';
                     }
+
                 });
 
             $urlRouterProvider.otherwise('/');

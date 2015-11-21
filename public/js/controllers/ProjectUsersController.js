@@ -3,24 +3,15 @@
 
     angular
         .module('UnknownControllers')
-        .controller('ProjectUsersController', function ($scope, $stateParams, Project, Utils) {
+        .controller('ProjectUsersController', function ($scope, $stateParams, Project, Utils, oProject) {
 
             var vm = $scope;
+            vm.projectList = oProject;
             vm.view = $stateParams.view;
             vm.pId = $stateParams.id;
             vm.projectUsers = {};
 
             vm.actions = {
-                show: function () {
-
-                    Project
-                        .get()
-                        .success(function (response) {
-                            if (response) {
-                                vm.projectList = response;
-                            }
-                        });
-                },
                 openModal: function () {
                     Utils.openModal('addProjectUser');
                 },
@@ -49,11 +40,9 @@
                         });
                 },
                 getProjectUsers: function () {
-                    console.log('get project users');
                     Project
                         .getProjectUsers({id:vm.pId})
                         .success(function (response) {
-                            console.log(response);
                             if (response) {
                                 vm.projectUsers = response;
                             }
