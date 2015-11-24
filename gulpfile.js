@@ -31,14 +31,19 @@ var elixir = require('laravel-elixir'),
             services: {
                 files:[
                     'AjaxService.js',
-                    'AuthService.js'
+                    'UtilsService.js',
+                    'ProjectService.js',
+                    'UsersService.js',
                 ],
                 dir: 'public/js/services',
                 dest:'public/build/js/services.min.js'
             },
             controllers: {
                 files:[
-                    'AuthController.js'
+                    'DashboardController.js',
+                    'ProjectController.js',
+                    'ProjectUsersController.js',
+                    'IssuesController.js',
                 ],
                 dir: 'public/js/controllers',
                 dest:'public/build/js/controllers.min.js'
