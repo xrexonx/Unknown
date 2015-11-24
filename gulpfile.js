@@ -4,7 +4,7 @@ var elixir = require('laravel-elixir'),
 
     assets = {
         css : {
-            files:['materialize.css'],
+            files:['app.css', 'materialize.css'],
             dir: 'public/css',
             dest:'public/build/css/styles.min.css'
         },
