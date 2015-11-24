@@ -11,6 +11,7 @@
 <script type="text/javascript" src="{{ asset('js/controllers/DashboardController.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/controllers/IssuesController.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/controllers/ProjectUsersController.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/controllers/ProjectController.js') }}"></script>
 
 </body>
 </html>

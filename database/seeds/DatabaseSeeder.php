@@ -16,12 +16,15 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         $users = array(
+            ['name' => 'Rexon De los Reyes', 'email' => 'rexon@gmail.com', 'password' => Hash::make('secret')],
+            ['name' => 'John Doe', 'email' => 'john@gmail.com', 'password' => Hash::make('secret')],
+            ['name' => 'Jane Smith', 'email' => 'jane@gmail.com', 'password' => Hash::make('secret')],
+            ['name' => 'Robert Martin', 'email' => 'unclebob@gmail.com', 'password' => Hash::make('secret')],
+            ['name' => 'Jeffrey Way', 'email' => 'jeffway@laracast.com', 'password' => Hash::make('secret')],
             ['name' => 'Ryan Chenkie', 'email' => 'ryanchenkie@gmail.com', 'password' => Hash::make('secret')],
             ['name' => 'Chris Sevilleja', 'email' => 'chris@scotch.io', 'password' => Hash::make('secret')],
             ['name' => 'Holly Lloyd', 'email' => 'holly@scotch.io', 'password' => Hash::make('secret')],
             ['name' => 'Adnan Kukic', 'email' => 'adnan@scotch.io', 'password' => Hash::make('secret')],
-            ['name' => 'Jane Smith', 'email' => 'jane@gmail.com', 'password' => Hash::make('secret')],
-            ['name' => 'Jeffrey Way', 'email' => 'jeffway@laracast.com', 'password' => Hash::make('secret')],
         );
 
         // Loop through each user above and create the record for them in the database
