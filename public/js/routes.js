@@ -17,19 +17,18 @@
 
             $stateProvider
                 .state('/', {
-                    resolve: oResolved,
                     url: '/',
                     templateUrl: _getView('dashboard'),
-                    controller: 'DashController'
+                    controller: 'DashController',
+                    resolve: oResolved
                 })
                 .state('project', {
-                    resolve: oResolved,
                     url: '/:id/:view',
                     templateUrl: _getView('project'),
                     controllerProvider: function($stateParams) {
                         return $stateParams.view + 'Controller';
-                    }
-
+                    },
+                    resolve: oResolved
                 });
 
             $urlRouterProvider.otherwise('/');
